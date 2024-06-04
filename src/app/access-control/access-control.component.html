@@ -1,0 +1,192 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item">Admin</li>
+                <li class="breadcrumb-item active">Access Control</li>
+            </ol>
+        </nav>
+    </div>
+
+    <section class="section">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="mt-4">Maintain Role Level Access Control</h1>
+                <hr />
+
+                <div class="search-form">
+                    <p>Search Criteria</p>
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-4">
+                            <label for="role" class="form-label">Role</label>
+                            <input type="text" class="form-control" id="role" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="access_type" class="form-label">Access Control Type</label>
+                            <select class="form-select" id="access_type" required>
+                                <option selected disabled value="">Field Level</option>
+                                <option>Field Level 1</option>
+                                <option>Field Level 2</option>
+                                <option>Field Level 3</option>
+                                <option>Field Level 4</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="access_type" class="form-label">Case Category</label>
+                            <select class="form-select" id="access_type" required>
+                                <option selected disabled value="">Case Category</option>
+                                <option>Case Category 1</option>
+                                <option>Case Category 2</option>
+                                <option>Case Category 3</option>
+                                <option>Case Category 4</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="access_type" class="form-label">Case Sub-Category</label>
+                            <select class="form-select" id="access_type" required>
+                                <option selected disabled value="">Case Sub-Category</option>
+                                <option>Case Sub-Category 1</option>
+                                <option>Case Sub-Category 2</option>
+                                <option>Case Sub-Category 3</option>
+                                <option>Case Sub-Category 4</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 text-end">
+                            <button class="btn btn-link no-underline" type="submit">Clear</button>
+                            <button class="btn btn-primary" type="button" (click)="showNoResult=false">Search</button>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+
+            <div class="no-result text-center p-5 mt-5" *ngIf="showNoResult">
+                <img src="../../assets/img/no-result.png">
+            </div>
+
+            <div class="card"  *ngIf="!showNoResult">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="card-title float-start">Access Control</h5>
+                            <span class="float-end pt-4 pr-4"><i class="bi bi-funnel"></i></span>
+                        </div>
+                    </div>
+                    <hr class="mt-0"/>
+                  <!-- Default Table -->
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Case Study</th>
+                        <th scope="col">Case Sub-Study</th>
+                        <th scope="col">Field Name</th>
+                        <th scope="col">Access Type</th>
+                        <th scope="col">Masking Preview</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">NRI</th>
+                        <td>Address Update</td>
+                        <td>Address </td>
+                        <td>No Access</td>
+                        <td>XXXXXX XXXXXX XXXX</td>
+                        <td>
+                            <i class="bi bi-eye me-2 blue-color-icon"></i>
+                            <i class="bi bi-trash3 blue-color-icon"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">NRI</th>
+                        <td>Address Update</td>
+                        <td>Address </td>
+                        <td>No Access</td>
+                        <td>XXXXXX XXXXXX XXXX</td>
+                        <td>
+                            <i class="bi bi-eye me-2 blue-color-icon"></i>
+                            <i class="bi bi-trash3 blue-color-icon"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">NRI</th>
+                        <td>Address Update</td>
+                        <td>Address </td>
+                        <td>No Access</td>
+                        <td>XXXXXX XXXXXX XXXX</td>
+                        <td>
+                            <i class="bi bi-eye me-2 blue-color-icon"></i>
+                            <i class="bi bi-trash3 blue-color-icon"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">NRI</th>
+                        <td>Address Update</td>
+                        <td>Address </td>
+                        <td>No Access</td>
+                        <td>XXXXXX XXXXXX XXXX</td>
+                        <td>
+                            <i class="bi bi-eye me-2 blue-color-icon"></i>
+                            <i class="bi bi-trash3 blue-color-icon"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">NRI</th>
+                        <td>Address Update</td>
+                        <td>Address </td>
+                        <td>No Access</td>
+                        <td>XXXXXX XXXXXX XXXX</td>
+                        <td>
+                            <i class="bi bi-eye me-2 blue-color-icon"></i>
+                            <i class="bi bi-trash3 blue-color-icon"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">NRI</th>
+                        <td>Address Update</td>
+                        <td>Address </td>
+                        <td>No Access</td>
+                        <td>XXXXXX XXXXXX XXXX</td>
+                        <td>
+                            <i class="bi bi-eye me-2 blue-color-icon"></i>
+                            <i class="bi bi-trash3 blue-color-icon"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">NRI</th>
+                        <td>Address Update</td>
+                        <td>Address </td>
+                        <td>No Access</td>
+                        <td>XXXXXX XXXXXX XXXX</td>
+                        <td>
+                            <i class="bi bi-eye me-2 blue-color-icon"></i>
+                            <i class="bi bi-trash3 blue-color-icon"></i>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- End Default Table Example -->
+                </div>
+              </div>
+        </div>
+    </section>
+
+</main>
